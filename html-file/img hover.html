@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body{
+        background-image: repeating-linear-gradient(rgb(159, 149, 112),
+         rgb(125, 125, 151));
+    }
+
+    .one{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        
+        
+    }
+    .wrapper{
+       
+        box-sizing: border-box;
+        width: 390px;
+        height: 280px;
+        margin: 10px 0 20px 10px;
+        overflow: hidden;
+        border: 1px ridge rgb(243, 240, 216);
+        border-radius: 5%;
+        position: relative;
+
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s;                           
+           
+        }
+
+        
+        
+
+        img:hover{
+            transform: scale(1.2);
+        }
+     
+         .text{
+            position: absolute;
+            left: 25%;
+            text-shadow: 2px 2px 4px black, 0 2px 8px blue;
+            bottom: 10%;
+            color: aliceblue;
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one">
+    <div class="wrapper">
+        <img src="/img/anime (2).png" alt="">
+        <div class="text">learning together is nice</div>
+    </div>
+    <div class="wrapper">
+        <img src="/img/tiger.jpeg" alt="">
+        <div class="text">It's a tiger</div>
+    </div>
+    <div class="wrapper">
+        <img src="/img/sonic.jpg" alt="">
+        <div class="text">Sonic the hedgehog</div>
+    </div>
+    <div class="wrapper">
+        <img src="/img/spidy.png" alt="">
+        <div class="text">Wanna catch some bad guys</div>
+    </div>
+    <div class="wrapper">
+        <img src="/img/anime (2).png" alt="">
+        <div class="text">How do we look mister</div>
+    </div>
+    <div class="wrapper">
+        <img src="/img/lion.png" alt="">
+        <div class="text">Enjoy some music with me</div>
+    </div>
+</div>
+</body>
+</html>
