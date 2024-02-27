@@ -1,88 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>body{
-        background-image: repeating-linear-gradient(rgb(159, 149, 112),
-         rgb(125, 125, 151));
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hover</title>
+    <link rel="stylesheet" href="/fontawesome-free-6.5.1-web/css/all.css">
+    <style>
+      header{
+        display: flex;
+        justify-content: space-evenly;
+        z-index: 99;
+        background-color: white;
+        line-height: 60px;
+        box-shadow: 0px 2px 6px gray inset;
+      }
+      
+     .container{
+      display: flex;
+     }
 
-    .one{
+      body {
+        background-color: indigo;
+        padding: 0;
+        margin: 0;
+      }
+
+      .row{
+        padding: 1rem 10px;
+        z-index: 29;
+        background-color: indigo;
+        overflow: hidden;
+        float: left;
+        box-shadow: 1px 0px 3px ;
+        height: 1000px;
+        color: gray;
+      }
+
+      .row:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .sidebar{
+              display: block;
+              float: left;
+              align-items: center;
+
+             
+      }
+
+      .sidebar>div{
+        padding: 40px 5px 5px 25px;
+
+        
+      }
+
+      p{
+        margin-left: -9px;
+      }
+
+
+      .one {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto;
+        background-color: white;
+        z-index: 2;
+        border-radius: 3px;
         
-        
-    }
-    .wrapper{
-       
+      }
+      .wrapper {
         box-sizing: border-box;
-        width: 390px;
-        height: 280px;
-        margin: 10px 0 20px 10px;
+        
+        margin: 10px 6px 20px 6px;
         overflow: hidden;
         border: 1px ridge rgb(243, 240, 216);
         border-radius: 5%;
         position: relative;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
+        'Lucida Sans', Arial, sans-serif
+      }
 
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+        transition: 0.3s;
+      }
+
+      img:hover {
+        transform: scale(1.2);
+      }
+
+      .text {
+        position: absolute;
+        left: 25%;
+        /* text-shadow: 2px 2px 4px black, 0 2px 8px blue; */
+        bottom: 8%;
+        color: rgb(232, 241, 248);
+        font-size: 20px;
+        /* font-weight: bold; */
+        /* display: flex; */
+
+      }
+
+      .two{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 50px;
+        bottom: 6px;
+        width: 200px;
+      }
+      @media only screen and (min-width: 600px) {
+        .one {
+          
+          grid-template-columns: auto auto;
         }
-
-        img{
-            width: 100%
-            ;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.3s;                           
-           
-        }
-
         
-        
+      }
 
-        img:hover{
-            transform: scale(1.2);
+      @media only screen and (min-width: 1024px) {
+        .one {
+          
+          grid-template-columns: auto auto auto;
         }
-     
-         .text{
-            position: absolute;
-            left: 25%;
-            text-shadow: 2px 2px 4px black, 0 2px 8px blue;
-            bottom: 10%;
-            color: aliceblue;
-            font-size: 20px;
-            font-weight: bold;
-
-        }
-
+         
+          
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <div> 
+        <i class="fa-solid fa-lightbulb"></i>
+        <span>what i do</span>
+      </div>
+
+      <div class="container">
+        <div>
+          <input type="text" placeholder="Search...">
+        </div>
+        <div>
+          <button>+ create</button>
+        </div>
+        <div>
+          <a href="#">log in</a>
+          <button>sign up</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="row">
+      <div class="sidebar">
+        <div>
+          <i class="fa-solid fa-home"></i>
+          <p>Home</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-compass"></i>
+          <p>Explore</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-bell"></i>
+          <p style="margin-left: -20px;">Notification</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-user"></i>
+          <p>Profile</p>
+        </div>
+
+      </div>
+
+    </div>
+
     <div class="one">
-    <div class="wrapper">
-        <img src="/img/anime (2).png" alt="">
-        <div class="text">learning together is nice</div>
+      <div class="wrapper">
+        <img src="/img/anime (2).png" alt="" />
+        <div class="text">
+          <i class="fa-solid fa-user" style="border: 1px solid gray;padding: 10px;
+          font-size: 30px; border-radius: 50px; background: gray;color: rgb(39, 35, 35);"></i> 
+           <div class="two">
+            <span>learning is nice</span>
+           <span>1k views</span>
+           </div>
+        </div>
+
+      </div>
+      <div class="wrapper">
+        <img src="/img/tiger.jpeg" alt="" />
+        <div class="text">
+          <i class="fa-solid fa-user" style="border: 1px solid gray;padding: 10px;
+          font-size: 30px; border-radius: 50px; background: gray;color: rgb(39, 35, 35);"></i> 
+           <div class="two">
+            <span>It's a tiger</span>
+           <span>1k views</span>
+           </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <img src="/img/sonic.jpg" alt="" />
+        <div class="text">
+          <i class="fa-solid fa-user" style="border: 1px solid gray;padding: 10px;
+          font-size: 30px; border-radius: 50px; background: gray;color: rgb(39, 35, 35);"></i> 
+           <div class="two">
+            <span>Sonic the hedgehog</span>
+           <span>1k views</span>
+           </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <img src="/img/spidy.png" alt="" />
+        <div class="text">
+          <i class="fa-solid fa-user" style="border: 1px solid gray;padding: 10px;
+          font-size: 30px; border-radius: 50px; background: gray;color: rgb(39, 35, 35);"></i> 
+           <div class="two">
+            <span>Wanna catch some bad guys</span>
+           <span>1k views</span>
+           </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <img src="/img/home1.png" alt="" />
+        <div class="text">
+          <i class="fa-solid fa-user" style="border: 1px solid gray;padding: 10px;
+          font-size: 30px; border-radius: 50px; background: gray;color: rgb(39, 35, 35);"></i> 
+           <div class="two">
+            <span>Together we move</span>
+           <span>1k views</span>
+           </div>
+          
+        </div>
+      </div>
+      <div class="wrapper">
+        <img src="/img/lion.png" alt="" />
+        <div class="text">
+          <i class="fa-solid fa-user" style="border: 1px solid gray;padding: 10px;
+          font-size: 30px; border-radius: 50px; background: gray;color: rgb(39, 35, 35);"></i> 
+           <div class="two">
+            <span>having a good time</span>
+           <span>1k views</span>
+           </div>
+      </div>
     </div>
-    <div class="wrapper">
-        <img src="/img/tiger.jpeg" alt="">
-        <div class="text">It's a tiger</div>
-    </div>
-    <div class="wrapper">
-        <img src="/img/sonic.jpg" alt="">
-        <div class="text">Sonic the hedgehog</div>
-    </div>
-    <div class="wrapper">
-        <img src="/img/spidy.png" alt="">
-        <div class="text">Wanna catch some bad guys</div>
-    </div>
-    <div class="wrapper">
-        <img src="/img/anime (2).png" alt="">
-        <div class="text">How do we look mister</div>
-    </div>
-    <div class="wrapper">
-        <img src="/img/lion.png" alt="">
-        <div class="text">Enjoy some music with me</div>
-    </div>
-</div>
-</body>
+  </body>
 </html>
